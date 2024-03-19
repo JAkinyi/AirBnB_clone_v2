@@ -18,7 +18,7 @@ class FileStorage:
         key = "{}.{}".format(type(obj).__name__, obj.id)
         if key in FileStorage.__objects:
             del FileStorage.__objects[key]
-            self.save()
+            FileStorage.save()
             
     def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
